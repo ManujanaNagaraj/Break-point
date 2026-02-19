@@ -1,4 +1,5 @@
 import { CartProvider } from './contexts/CartContext'
+import { ToastProvider } from './contexts/ToastContext'
 import { ErrorBoundary } from './components/ErrorBoundary'
 import AppContent from './AppContent'
 
@@ -6,7 +7,9 @@ function App() {
   return (
     <ErrorBoundary>
       <CartProvider>
-        <AppContent />
+        <ToastProvider>
+          <AppContent />
+        </ToastProvider>
       </CartProvider>
     </ErrorBoundary>
   )
