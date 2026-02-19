@@ -1,5 +1,6 @@
 import { MENU_DATA } from '../data'
 import FoodCard from './FoodCard'
+import EmptyState from './EmptyState'
 
 interface MenuGridProps {
   searchQuery: string
@@ -26,8 +27,8 @@ export default function MenuGrid({ searchQuery, category }: MenuGridProps) {
 
   if (filteredItems.length === 0) {
     return (
-      <div className="py-12 text-center">
-        <p className="text-muted-foreground">No items found</p>
+      <div className="mt-4">
+        <EmptyState type="search" />
       </div>
     )
   }
