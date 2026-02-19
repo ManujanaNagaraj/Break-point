@@ -1,11 +1,14 @@
 import { CartProvider } from './contexts/CartContext'
+import { ErrorBoundary } from './components/ErrorBoundary'
 import AppContent from './AppContent'
 
 function App() {
   return (
-    <CartProvider>
-      <AppContent />
-    </CartProvider>
+    <ErrorBoundary>
+      <CartProvider>
+        <AppContent />
+      </CartProvider>
+    </ErrorBoundary>
   )
 }
 
