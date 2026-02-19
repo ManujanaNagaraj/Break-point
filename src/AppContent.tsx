@@ -8,6 +8,7 @@ import FloatingCartBar from './components/FloatingCartBar'
 import CartSheet from './components/CartSheet'
 import CheckoutSheet from './components/CheckoutSheet'
 import OrderConfirmation from './components/OrderConfirmation'
+import ScrollToTop from './components/ScrollToTop'
 
 type View = 'menu' | 'confirmation'
 
@@ -64,6 +65,8 @@ function AppContent() {
         onClose={() => setIsCheckoutOpen(false)}
         onSuccess={handleOrderSuccess}
       />
+
+      <ScrollToTop />
     </div>
   )
 }
